@@ -1,0 +1,36 @@
+{
+  "name": "mems",
+  "version": "0.1.0",
+  "description": "mems is a simple Twitter clone",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OmurbekArykbaev/mems.git"
+  },
+  "keywords": [
+    "Twitter",
+    "clone",
+    "Express",
+    "simple"
+  ],
+  "author": "Omurbek Arykbaev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OmurbekArykbaev/mems/issues"
+  },
+  "homepage": "https://github.com/OmurbekArykbaev/mems#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-redis": "^6.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.2.5",
+    "redis": "^3.1.2",
+    "sequelize": "^6.6.4"
+  }
+}

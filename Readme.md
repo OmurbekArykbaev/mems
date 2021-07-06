@@ -14,6 +14,9 @@
 file specify the following
 
 ```
+# Server Params
+MEMS_PORT=8099          #Port to run server 
+MEMS_HOST=localhost     #localhost to way at server
 # DB Params
 
 DB_HOST=localhost # database location

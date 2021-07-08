@@ -16,9 +16,11 @@ file specify the following
 ```
 # Server Params
 
-MEMS_PORT=8099          #Port to run server 
-MEMS_HOST=localhost     #localhost to way at server
-MEMS_ADMIN_LOGIN=chief        #Name of admin in server
+MEMS_PORT=8099              #Port to run server 
+MEMS_HOST=localhost         #localhost to way at server
+MEMS_ADMIN_LOGIN=chief      #Name of admin in server
+MEMS_ADMIN_PASSWORD=?       #Password of admin in server
+MEMS_SESSION_SECRET=?       #Session secret
 
 # DB Params
 

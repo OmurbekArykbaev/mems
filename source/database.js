@@ -5,20 +5,21 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const db = new Sequelize(
-    process.env.DB_NAME,
-    process.env.DB_USER,
-    process.env.DB_PASS,
-    {
-      host: process.env.DB_HOST,
-      port: process.env.DB_PORT,
-      dialect: process.env.DB_DIALECT
-    }
-  )
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASS,
+  {
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
+    dialect: process.env.DB_DIALECT
+  }
+)
 
 export const User = db.define('user', {
   login : {
     type: Sequelize.DataTypes.STRING(140),
     allowNull : false,
+    unique: true
   },
   password : {
     type: Sequelize.DataTypes.STRING(256),

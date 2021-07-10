@@ -2,8 +2,9 @@ import express from 'express'
 import session   from 'express-session'
 import dotenv from 'dotenv'
 
-import {User, dbStart} from './source/database.js'
+import {User, Message, dbStart} from './source/database.js'
 import users from './source/users.js'
+import messages from './source/messages.js'
 
 dotenv.config()
 
@@ -29,6 +30,7 @@ app.get('/', (req, res) => {
 })
 
 users(app, User)
+messages(app, Message)
 
 dbStart()
 

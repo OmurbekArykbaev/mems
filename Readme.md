@@ -2,13 +2,14 @@
 
 **mems** is a simple Twitter clone
 
-## Required Software
+## Inital Manual Setup
+### Required Software
+### Steps
 
 * Node.js (>= v16.3.0)
 * npm (>= 7.17.0)
 * MySQL (>= 8.0.25)
 
-## Inital Setup
 
 1. Create an `.env`. Inside the
 file specify the following
@@ -43,6 +44,24 @@ npm install
 ```
 npm start
 ```
+
+## Inital Setup through Docker
+
+### Required Software
+
+* Docker (>= 20.10.7)
+
+### Steps
+
+1. Install Docker and Docker Compose
+2. Create an `.env` file as described in 'Initial Manual Setup'
+3. Start the system
+
+```
+docker-compose up
+```
+
+
 
 ## Credits
 

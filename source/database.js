@@ -44,7 +44,7 @@ Message.belongsTo(User)
 
 export async function dbStart() {
   await db.sync()
-  await User.upsert({
+  return User.upsert({
     login: process.env.MEMS_ADMIN_LOGIN,
     password: bcrypt.hashSync(process.env.MEMS_ADMIN_PASSWORD, 8),
     admin: true

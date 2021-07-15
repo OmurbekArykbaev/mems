@@ -30,10 +30,23 @@ app.get('/', (req, res) => {
 })
 
 users(app, User)
-messages(app, Message)
+messages(app, Message, User);
 
-dbStart()
+(function loop () {
 
-app.listen(port, () => {
-  console.log(`mems sever is listening at http://${host}:${port}`)
-})
+
+setTimeout(async () => {
+      try {
+        await dbStart()
+
+        app.listen(port, () => {
+          console.log(`mems sever is listening at http://${host}:${port}`)
+        })
+
+      } catch (error) {
+          console.error(error)
+          loop()
+      }
+  },3000)
+})()
+

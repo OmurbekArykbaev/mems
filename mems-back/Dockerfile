@@ -1,6 +1,6 @@
-FROM node:16-alpine 
+FROM node:16-alpine
 
-EXPOSE 8099
+EXPOSE 8080
 WORKDIR /mems
 
 COPY package.json /mems

@@ -1,0 +1,24 @@
+version: "3.0"
+
+services:
+    mems:
+        build: "."
+        image: "oarykbaev/mems"
+        ports:
+            - "8080:8080"
+        env_file: ".env"
+        depends_on:
+            - "mems-db"
+            - "mems-sess-db"
+
+    mems-db:
+        image: "mysql:8"
+        command: "--character-set-server=utf8 --collation-server=utf8_general_ci"
+        environment:
+            MYSQL_ROOT_PASSWORD: "${DB_PASS:?DB_PASS was not specified}"
+            MYSQL_DATABASE: "${DB_NAME:-mems_db}"
+            MYSQL_USER: "${DB_USER:-mems_db_user}"
+            MYSQL_PASSWORD: "${DB_PASS:?DB_PASS was not specified}"
+
+    mems-sess-db:
+        image: "redis:6-alpine"

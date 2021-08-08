@@ -1,7 +1,7 @@
 {
   "name": "mems",
   "version": "0.1.0",
-  "description": "mems is a simple Twitter clone",
+  "description": "mems is a simple Twitter clone.",
   "main": "mems.js",
   "scripts": {
     "start": "node mems.js",
@@ -9,29 +9,30 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OmurbekArykbaev/mems.git"
+    "url": "git+https://github.com/toksaitov/mems.git"
   },
   "keywords": [
     "Twitter",
     "clone",
-    "Express",
-    "simple"
+    "Express"
   ],
-  "author": "Omurbek Arykbaev",
+  "author": "Dmitrii Toksaitov <dmitrii@toksaitov.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/OmurbekArykbaev/mems/issues"
+    "url": "https://github.com/toksaitov/mems/issues"
   },
-  "homepage": "https://github.com/OmurbekArykbaev/mems#readme",
+  "homepage": "https://github.com/toksaitov/mems#readme",
+  "type": "module",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-redis": "^6.0.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.2",
+    "ioredis": "^4.27.6",
     "mysql2": "^2.2.5",
     "redis": "^3.1.2",
-    "sequelize": "^6.6.4"
-  },
-  "type" : "module"
+    "sequelize": "^6.6.5",
+    "validator": "^13.6.0"
+  }
 }
